@@ -8,4 +8,4 @@ FROM alpine:3.13.3
 
 COPY --from=build /usr/local/cargo/bin/diesel /bin/diesel
 
-ENTRYPOINT [ "diesel" ]
+ENTRYPOINT [ "/bin/diesel" ]
