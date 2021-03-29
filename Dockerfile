@@ -8,6 +8,6 @@ FROM alpine:3.13.3
 
 
 WORKDIR /usr/src
-COPY --from=build /usr/local/cargo/bin/diesel /bin/diesel
+COPY --from=build /usr/local/cargo/bin/diesel /usr/src/diesel
 
-ENTRYPOINT [ "/bin/diesel" ]
+ENTRYPOINT [ "/usr/src/diesel" ]
