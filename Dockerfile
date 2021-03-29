@@ -6,6 +6,8 @@ RUN cargo install diesel_cli --no-default-features --features mysql
 
 FROM alpine:3.13.3
 
+
+WORKDIR /usr/src
 COPY --from=build /usr/local/cargo/bin/diesel /bin/diesel
 
 ENTRYPOINT [ "/bin/diesel" ]
