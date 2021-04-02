@@ -9,7 +9,7 @@ RUN rustup target add x86_64-unknown-linux-musl
 RUN --mount=target=/root/.cargo/registry/,rw \
   cargo install diesel_cli --no-default-features --features mysql --target x86_64-unknown-linux-musl
 
-FROM alpine:3.13.3
+FROM gcr.io/distroless/base
 
 WORKDIR /usr/src
 COPY --from=build /root/.cargo/bin/diesel /usr/src/diesel
