@@ -39,4 +39,4 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache
           tags: |
             asia-northeast1-docker.pkg.dev/cpctf-338715/system/docker-diesel:latest
-            asia-northeast1-docker.pkg.dev/cpctf-338715/system/docker-diesel:${{env.TAG}}
+            asia-northeast1-docker.pkg.dev/cpctf-338715/system/docker-diesel:${{env.IMAGE_TAG}}
